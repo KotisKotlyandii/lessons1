@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+    #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 # Есть словарь кодов товаров
@@ -49,7 +49,25 @@ print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, '�
 # WARNING для знающих циклы: БЕЗ циклов. Да, с переменными; да, неэффективно; да, копипаста.
 # Это задание на ручное вычисление - что бы потом понять как работают циклы и насколько с ними проще жить.
 
-# TODO здесь ваш код
+stol_cost = store[goods['Стол']][0]['quantity']  * store[goods['Стол']][0]['price']
+stol_cost2 = store[goods['Стол']][1]['quantity']  * store[goods['Стол']][1]['price']
+stol_all_cost = stol_cost + stol_cost2
+kol_stolov = store[goods['Стол']][0]['quantity'] +store[goods['Стол']][1]['quantity']
+print("Cтол - {} шт, стоимость {} руб".format(kol_stolov, stol_all_cost))
+
+divan_cost = store[goods['Диван']][0]['quantity']  * store[goods['Диван']][0]['price']
+divan_cost2 = store[goods['Диван']][1]['quantity']  * store[goods['Диван']][1]['price']
+all_divan_cost = divan_cost + divan_cost2
+kol_divanov = store[goods['Диван']][0]['quantity']+store[goods['Диван']][1]['quantity']
+print("Диван - {} шт, стоимость {} руб".format(kol_divanov, all_divan_cost))
+
+ctyl_cost = store[goods['Стул']][0]['quantity'] * store[goods['Стул']][0]['price']
+ctyl_cost2 = store[goods['Стул']][1]['quantity'] * store[goods['Стул']][1]['price']
+ctyl_cost3 = store[goods['Стул']][2]['quantity'] * store[goods['Стул']][2]['price']
+all_ctyl_cost = ctyl_cost + ctyl_cost2 + ctyl_cost3
+kol_styliev = store[goods['Стул']][0]['quantity']+store[goods['Стул']][1]['quantity']+store[goods['Стул']][2]['quantity']
+print("Стул - {} шт, стоимость {} руб".format(kol_styliev, all_ctyl_cost))
+
 
 ##########################################################################################
 # ВНИМАНИЕ! После того как __ВСЯ__ домашняя работа сделана и запушена на сервер,         #
