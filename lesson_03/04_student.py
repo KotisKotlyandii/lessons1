@@ -10,5 +10,16 @@
 #   Студенту надо попросить ХХХ.ХХ рублей
 
 educational_grant, expenses = 10000, 12000
+months = 10
+all_moths = 0
+help_parents = 0
+while months > all_moths:
+    all_moths += 1
+    if all_moths == 1:
+        help_parents = expenses - educational_grant
+        continue
+    else:
+        expenses = expenses + ( expenses * 0.03 )
+        help_parents = help_parents + (expenses - educational_grant)
+print("студенту надо попросить {} рублей".format(int(help_parents)))
 
-# TODO здесь ваш код
