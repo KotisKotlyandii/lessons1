@@ -46,7 +46,16 @@ store = {
 #         подсчет стоимости товара
 #     вывод на консоль количества и стоимости товара на складе
 
-# TODO здесь ваш код
+for good in goods:
+    quantity = 0
+    price = 0
+    code = goods[good]
+    for lists in store[code]:
+        price += lists['price']
+        quantity += lists['quantity']
+        all_price = quantity * price
+    print("{} - {} шт, стоимость {} руб".format(good, quantity, all_price))
+
 
 
 
