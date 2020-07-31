@@ -10,14 +10,11 @@
 #   Студенту надо попросить ХХХ.ХХ рублей
 
 educational_grant, expenses = 10000, 12000
-all_moths = 0
+all_moths = 1
 help_parents = 0
-while 10 > all_moths:
+while all_moths < 10:
+    expenses = expenses + (expenses * 0.03)
+    help_parents = help_parents + (expenses - educational_grant)
     all_moths += 1
-    if all_moths == 1:
-        help_parents = expenses - educational_grant
-    else:
-        expenses = expenses + ( expenses * 0.03 )
-        help_parents = help_parents + (expenses - educational_grant)
-print("студенту надо попросить {} рублей".format(int(help_parents)))
+print("студенту надо попросить {} рублей".format(round(help_parents, 2)))
 
