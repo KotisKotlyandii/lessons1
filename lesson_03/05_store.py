@@ -49,12 +49,17 @@ store = {
 for good in goods:
     quantity = 0
     price = 0
+    all_quantity = 0
+    all_price = 0
     code = goods[good]
     for lists in store[code]:
-        price += lists['price']
-        quantity += lists['quantity']
-        all_price = quantity * price
-    print("{} - {} шт, стоимость {} руб".format(good, quantity, all_price))
+        price = lists['price']
+        quantity = lists['quantity']
+        all_price += (quantity * price)
+        price = 0
+        all_quantity += quantity
+        quantity = 0
+    print("{} - {} шт, стоимость {} руб".format(good, all_quantity, all_price))
 
 
 
