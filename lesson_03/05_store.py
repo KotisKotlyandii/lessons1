@@ -56,9 +56,7 @@ for good in goods:
         price = lists['price']
         quantity = lists['quantity']
         all_price += (quantity * price)
-        price = 0
         all_quantity += quantity
-        quantity = 0
     print("{} - {} шт, стоимость {} руб".format(good, all_quantity, all_price))
 
 
