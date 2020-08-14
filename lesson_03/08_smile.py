@@ -10,6 +10,7 @@ from random import randint
 def head(x,y,color):
     s.ellipse(left_bottom=x, right_top=y, color = color)
 for _ in range(10):
+
     head(x = s.random_point(), y = s.random_point(), color=s.random_color())
 
 
