@@ -30,35 +30,26 @@ import pygame
 # Результат решения см lesson_004/results/exercise_01_shapes.jpg
 
 def triangle(start_point, angle=0, length=100):
-    start = start_point
     for _ in range(3):
-        vector_one = sd.vector(start=start, angle=angle, length=length)
-        start = vector_one
+        start_point = sd.vector(start=start_point, angle=angle, length=length)
         angle += 120
 
 
 def square(start_point, angle=0, length=100):
-    start = start_point
     for _ in range(4):
-        vector_one = sd.vector(start=start, angle=angle, length=length)
-        start = vector_one
+        start_point = sd.vector(start=start_point, angle=angle, length=length)
         angle += 90
 
 
 def pentagon(start_point, angle=0, length=100):
-    start = start_point
     for _ in range(5):
-        vector = sd.vector(start=start, angle=angle, length=length)
-        start = vector
+        start_point = sd.vector(start=start_point, angle=angle, length=length)
         angle += 72
 
 
-#
 def hexagon(start_point, angle=0, length=100):
-    start = start_point
     for _ in range(6):
-        vector = sd.vector(start=start, angle=angle, length=length)
-        start = vector
+        start_point = sd.vector(start=start_point, angle=angle, length=length)
         angle += 60
 
 
