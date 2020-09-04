@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import simple_draw as sd
+import pygame
+
 
 # Часть 1.
 # Написать функции рисования равносторонних геометрических фигур:
@@ -27,7 +29,42 @@ import simple_draw as sd
 # sd.line()
 # Результат решения см lesson_004/results/exercise_01_shapes.jpg
 
-# TODO здесь ваш код
+def triangle(start_point, angle=0, length=100):
+    start = start_point
+    for _ in range(3):
+        vector_one = sd.vector(start=start, angle=angle, length=length)
+        start = vector_one
+        angle += 120
+
+
+def square(start_point, angle=0, length=100):
+    start = start_point
+    for _ in range(4):
+        vector_one = sd.vector(start=start, angle=angle, length=length)
+        start = vector_one
+        angle += 90
+
+
+def pentagon(start_point, angle=0, length=100):
+    start = start_point
+    for _ in range(5):
+        vector = sd.vector(start=start, angle=angle, length=length)
+        start = vector
+        angle += 72
+
+
+#
+def hexagon(start_point, angle=0, length=100):
+    start = start_point
+    for _ in range(6):
+        vector = sd.vector(start=start, angle=angle, length=length)
+        start = vector
+        angle += 60
+
+
+pentagon(sd.Point(250, 250))
+# point_0 = sd.get_point(200,200)
+# hexagon(start_point=point_0)
 
 # Часть 1-бис.
 # Попробуйте прикинуть обьем работы, если нужно будет внести изменения в этот код.
