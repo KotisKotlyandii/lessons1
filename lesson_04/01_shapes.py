@@ -29,31 +29,30 @@ import pygame
 # sd.line()
 # Результат решения см lesson_004/results/exercise_01_shapes.jpg
 
-def triangle(start_point, angle=0, length=100):
-    for _ in range(3):
-        start_point = sd.vector(start=start_point, angle=angle, length=length)
-        angle += 120
+# def triangle(start_point, angle=0, length=100):
+#     for _ in range(3):
+#         start_point = sd.vector(start=start_point, angle=angle, length=length)
+#         angle += 120
+#
+#
+# def square(start_point, angle=0, length=100):
+#     for _ in range(4):
+#         start_point = sd.vector(start=start_point, angle=angle, length=length)
+#         angle += 90
+#
+#
+# def pentagon(start_point, angle=0, length=100):
+#     for _ in range(5):
+#         start_point = sd.vector(start=start_point, angle=angle, length=length)
+#         angle += 72
+#
+#
+# def hexagon(start_point, angle=0, length=100):
+#     for _ in range(6):
+#         start_point = sd.vector(start=start_point, angle=angle, length=length)
+#         angle += 60
 
 
-def square(start_point, angle=0, length=100):
-    for _ in range(4):
-        start_point = sd.vector(start=start_point, angle=angle, length=length)
-        angle += 90
-
-
-def pentagon(start_point, angle=0, length=100):
-    for _ in range(5):
-        start_point = sd.vector(start=start_point, angle=angle, length=length)
-        angle += 72
-
-
-def hexagon(start_point, angle=0, length=100):
-    for _ in range(6):
-        start_point = sd.vector(start=start_point, angle=angle, length=length)
-        angle += 60
-
-
-pentagon(sd.Point(250, 250))
 # point_0 = sd.get_point(200,200)
 # hexagon(start_point=point_0)
 
@@ -62,6 +61,30 @@ pentagon(sd.Point(250, 250))
 # Скажем, связывать точки не линиями, а дугами. Или двойными линиями. Или рисовать круги в угловых точках. Или...
 # А если таких функций не 4, а 44?
 
+def common_part(kol_povt, angle_povorota, angle=0, start_point=sd.Point(200, 200), length=100, ):
+    for _ in range(kol_povt):
+        start_point = sd.vector(start=start_point, angle=angle, length=length)
+        angle += angle_povorota
+
+
+def trianglee(kol_povt, angle_povorota):
+    common_part(kol_povt=kol_povt, angle_povorota=angle_povorota)
+
+
+def square(kol_povt, angle_povorota):
+    common_part(kol_povt=kol_povt, angle_povorota=angle_povorota)
+
+
+def pentagon(kol_povt, angle_povorota):
+    common_part(kol_povt=kol_povt, angle_povorota=angle_povorota)
+
+
+def hexagon(kol_povt, angle_povorota):
+    common_part(kol_povt=kol_povt, angle_povorota=angle_povorota)
+
+
+
+trianglee(3, 120)
 # Часть 2 (делается после зачета первой части)
 #
 # Надо сформировать функцию, параметризированную в местах где была "небольшая правка".
