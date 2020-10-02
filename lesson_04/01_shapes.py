@@ -61,30 +61,37 @@ import pygame
 # Скажем, связывать точки не линиями, а дугами. Или двойными линиями. Или рисовать круги в угловых точках. Или...
 # А если таких функций не 4, а 44?
 
-def common_part(kol_povt, angle_povorota, angle=0, start_point=sd.Point(200, 200), length=100, ):
+def common_part(kol_povt, angle=0, start_point=sd.Point(200, 200), length=100, ):
     for _ in range(kol_povt):
         start_point = sd.vector(start=start_point, angle=angle, length=length)
-        angle += angle_povorota
+        angle += 360/kol_povt
 
 
-def trianglee(kol_povt, angle_povorota):
-    common_part(kol_povt=kol_povt, angle_povorota=angle_povorota)
+def triangle(angle, start_point, length):
+    kol_povt = 3
+    common_part(kol_povt=kol_povt, angle = angle, start_point = start_point, length = length)
 
 
-def square(kol_povt, angle_povorota):
-    common_part(kol_povt=kol_povt, angle_povorota=angle_povorota)
+def square(*args):
+    kol_povt = 4
+    common_part(kol_povt=kol_povt, angle = angle, start_point = start_point, length = length)
 
 
-def pentagon(kol_povt, angle_povorota):
-    common_part(kol_povt=kol_povt, angle_povorota=angle_povorota)
+def pentagon(angle, start_point, length):
+    kol_povt = 5
+    common_part(kol_povt=kol_povt, angle = angle, start_point = start_point, length = length)
 
 
-def hexagon(kol_povt, angle_povorota):
-    common_part(kol_povt=kol_povt, angle_povorota=angle_povorota)
+def hexagon(*args):
+    kol_povt = 6
+    common_part(kol_povt=kol_povt,*args)
 
 
 
-trianglee(3, 120)
+triangle(sd.Point(100, 100), 30, 100)
+square(sd.Point(370, 100), 30, 100)
+pentagon(sd.Point(150, 400), 30, 100)
+hexagon(sd.Point(450, 350), 30, 100)
 # Часть 2 (делается после зачета первой части)
 #
 # Надо сформировать функцию, параметризированную в местах где была "небольшая правка".
