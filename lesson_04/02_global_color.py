@@ -14,6 +14,10 @@ import simple_draw as sd
 # и константы COLOR_RED, COLOR_ORANGE, COLOR_YELLOW, COLOR_GREEN, COLOR_CYAN, COLOR_BLUE, COLOR_PURPLE
 # Результат решения см lesson_004/results/exercise_02_global_color.jpg
 
-# TODO здесь ваш код
+ALL_COLOR = [sd.COLOR_RED, sd.COLOR_ORANGE, sd.COLOR_YELLOW, sd.COLOR_GREEN, sd.COLOR_CYAN, sd.COLOR_BLUE, sd.COLOR_PURPLE]
 
+def common_part(start_point,angle,length,kol_povt, color):
+    for _ in range(kol_povt):
+        start_point = sd.vector(start=start_point, angle=angle, length=length, color = color)
+        angle += 360/kol_povt
 sd.pause()

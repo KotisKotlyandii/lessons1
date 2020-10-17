@@ -61,37 +61,34 @@ import pygame
 # Скажем, связывать точки не линиями, а дугами. Или двойными линиями. Или рисовать круги в угловых точках. Или...
 # А если таких функций не 4, а 44?
 
-def common_part(kol_povt, angle=0, start_point=sd.Point(200, 200), length=100, ):
+def common_part(start_point,angle,length,kol_povt):
     for _ in range(kol_povt):
         start_point = sd.vector(start=start_point, angle=angle, length=length)
         angle += 360/kol_povt
 
 
-def triangle(angle, start_point, length):
-    kol_povt = 3
-    common_part(kol_povt=kol_povt, angle = angle, start_point = start_point, length = length)
+def triangle(*args):
+    common_part(*args,3)
 
 
 def square(*args):
-    kol_povt = 4
-    common_part(kol_povt=kol_povt, angle = angle, start_point = start_point, length = length)
+    common_part(*args,4)
 
 
-def pentagon(angle, start_point, length):
-    kol_povt = 5
-    common_part(kol_povt=kol_povt, angle = angle, start_point = start_point, length = length)
+def pentagon(*args):
+    common_part(*args,5)
 
 
 def hexagon(*args):
-    kol_povt = 6
-    common_part(kol_povt=kol_povt,*args)
-
+    common_part(*args,6)
 
 
 triangle(sd.Point(100, 100), 30, 100)
 square(sd.Point(370, 100), 30, 100)
 pentagon(sd.Point(150, 400), 30, 100)
 hexagon(sd.Point(450, 350), 30, 100)
+
+
 # Часть 2 (делается после зачета первой части)
 #
 # Надо сформировать функцию, параметризированную в местах где была "небольшая правка".
