@@ -1,15 +1,14 @@
 a = int(input())
-stroka = []
-cravn = 0
+spic = []
 for _ in range(a):
-    chislo = int(input())
-    if chislo > cravn:
-        stroka.append(chislo)
-        cravn = chislo
-    elif chislo == cravn:
-        if len(str(chislo)) > len(str(cravn)):
-            stroka.append(chislo)
-        else:
-            stroka.insert(-2, chislo)
-    else:
-        for number in range (chislo):
+    element = int(input())
+    spic.append(element)
+for j in range(len(spic)):
+    for i in range(1, len(spic)):
+        if sum(map(int,str(spic[i - 1]))) > sum(map(int,str(spic[i]))):
+            spic[i], spic[i - 1] = spic[i - 1], spic[i]
+        if sum(map(int,str(spic[i - 1]))) == sum(map(int,str(spic[i]))):
+            if spic[i-1] > spic[i]:
+                spic[i], spic[i - 1] = spic[i - 1], spic[i]
+
+print(spic)
