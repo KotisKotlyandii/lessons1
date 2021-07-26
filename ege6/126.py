@@ -16,4 +16,4 @@ for s in range(1,1000):
             k += 1
         max = s
 
-print(str(max)+str(min))
+print(min, max, sep="")

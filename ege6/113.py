@@ -7,8 +7,8 @@ def func(s):
 
 max = 0
 
-for s in range(100,1000):
-    if func(s) > 100:
+for s in range(1,10000):
+    if 999 >= func(s) >= 100:
         max = s
 
 print(max)

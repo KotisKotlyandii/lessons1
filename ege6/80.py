@@ -7,8 +7,7 @@ def func(s):
 
 max = 0
 
-for s in range(-1000,10):
+for s in range(-1000,1000):
     if func(s) == 15:
         max = s
-
 print(max)

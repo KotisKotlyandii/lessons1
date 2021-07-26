@@ -8,8 +8,7 @@ def func(d):
 
 k = 0
 
-for d in range(1,10):
-    if func(d) > 0 and func(d) < 10:
+for d in range(1,1000):
+    if func(d) > 0:
         k += 1
-
-print(k)
+        print(d)

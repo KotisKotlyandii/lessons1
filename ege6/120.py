@@ -8,7 +8,7 @@ def func(s):
 k = 0
 
 for d in range(1,1000):
-    if func(d) > 243:
+    if func(d) == 243:
         k += 1
 
 print(k)

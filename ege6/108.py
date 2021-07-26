@@ -6,6 +6,6 @@ def func(s):
     return n
 
 for s in range(1,1000):
-    if func(s) >= 50:
+    if func(s) >= 450:
         print(s)
         break

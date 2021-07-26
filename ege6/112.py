@@ -6,6 +6,6 @@ def func(s):
     return s
 
 for s in range(0,1000):
-    if func(s) == s:
+    if func(s) != s:
         print(s)
         break

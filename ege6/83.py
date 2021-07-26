@@ -8,7 +8,7 @@ def func(d):
 
 kol = 0
 
-for d in range(0,1000):
+for d in range(1,1000):
     if func(d) == 50 and d % 10 == 8:
         kol +=1
 
