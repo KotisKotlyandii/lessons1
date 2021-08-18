@@ -7,5 +7,5 @@ def func(s):
 
 for s in range(-1000,1000):
     if func(s) < 195:
-        k = s
-print(k)
+        print(s)
+        break
