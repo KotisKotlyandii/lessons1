@@ -8,8 +8,7 @@ def f(n):
         s += 1
         f(n-1)
         f(n-2)
+        s += 1
     return s
 
-print(f(28))
-
-
+print(f(35))
