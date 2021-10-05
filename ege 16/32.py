@@ -11,7 +11,7 @@ def f(n):
 
 max = 0
 
-for n in range(100,999+1):
+for n in range(100,1500):
     if f(n) > 7:
         max = n
 

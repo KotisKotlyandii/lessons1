@@ -6,3 +6,10 @@ def f(n):
     else:
         return n*n+f(n-2)
 
+kol_n = 0
+
+for n in range(1,101):
+    if f(n) % 3 == 0:
+        kol_n += 1
+
+print(kol_n)

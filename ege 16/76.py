@@ -8,10 +8,10 @@ def f(n):
 
 def vychisl_na_chislo(n):
     while True:
-        if n == 1:
+        if n <= 1:
             return True
         if n % 2 == 0:
-            n = 3 + n // 2 - 1
+            n = n // 2 - 1
         else:
             return  False
 

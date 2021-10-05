@@ -6,4 +6,4 @@ def f(n):
     else:
         return -f(n-1)
 
-print(f(20))
+print(f())
