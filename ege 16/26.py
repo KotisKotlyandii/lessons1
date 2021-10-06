@@ -11,6 +11,7 @@ def f(n):
 
 for n in range(1,1000):
     s = 0
-    if f(n) > 1000000:
-        print(n,f(n))
+    x = f(n)
+    if x > 1000000:
+        print(n, x)
         break

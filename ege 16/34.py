@@ -6,7 +6,4 @@ def f(n):
         return 0
 
 
-for n in range(1,1000000):
-    if f(n) > 51:
-        print(n, f(n))
-        break
+print(f(520))
