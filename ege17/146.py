@@ -1,11 +1,16 @@
 def nacho_del(chislo):
-    kol_del = 0
+    kol_del = []
     for prov in range(1,int(chislo**0.5)+1):
-        if chislo % prov == 0 and chislo // prov != prov and len(str(prov)) == 2:
-            kol_del += 2
-        elif chislo % prov == 0 and len(str(prov)) == 2:
-            kol_del += 1
-    return kol_del
+        if chislo % prov == 0 and chislo // prov != prov:
+            kol_del.append(prov)
+            kol_del.append(chislo//prov)
+        elif chislo % prov == 0:
+            kol_del.append(prov)
+    k = 0
+    for i in kol_del:
+        if len(str(i)) == 2:
+            k += 1
+    return k
 
 spis = []
 
