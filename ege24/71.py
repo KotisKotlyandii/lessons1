@@ -4,24 +4,16 @@ sys.stdin = open('24data/k8-100.txt')
 
 tekst = input()
 
-sim = ''
+
 raaz = 1
-spisok = []
+max_k = 1
+buk = ""
 for i in range(len(tekst)-1):
     if tekst[i] == tekst[i+1]:
-        sim = tekst[i]
         raaz += 1
+        if raaz > max_k:
+            max_k = raaz
+            buk = tekst[i]
     else:
-        if raaz == 1:
-            continue
-        else:
-            spisok.append(str(str(raaz)+"_"+sim))
-            sim = ''
-            raaz = 1
-
-maxim = "0_"
-for i in range(len(spisok)):
-    if int(spisok[i][0:spisok[i].index("_")]) > int(maxim[0:maxim.index('_')]):
-        maxim = spisok[i]
-print(spisok)
-print(maxim)
+        raaz = 1
+print(buk, max_k)
