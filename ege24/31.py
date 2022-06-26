@@ -1,17 +1,15 @@
 import sys
-sys.stdin = open("24data/k7b-5.txt")
 
-s = input()
-spis = []
-dlina = 0
+sys.stdin = open('24data/k7b-5.txt')
 
-for i in range(0,len(s),2):
-    if s[i] == "C" and s[i + 1] == "A":
-        dlina += 2
-    elif s[i] == "C":
-        dlina += 1
-    else:
-        spis.append(dlina)
-        dlina = 0
+t = input()
 
-print(max(spis))
+t1 = "CA"
+
+while t1 in t:
+    t1 += "CA"
+
+if t1[:-1] in t:
+    print(len(t1)-1)
+else:
+    print(len(t1))
