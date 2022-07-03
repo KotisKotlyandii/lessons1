@@ -10,7 +10,7 @@ def f(a,b):
         return 1
     elif int(a,3) < int(b,3):
         return 0
-    if a[-1] == 0:
+    if a[-1] == '0':
         return f(tri(int(a,3) - 2),b)
     else:
         return f(tri(int(a,3) - 2),b) + f(a[:-1] + '0',b)

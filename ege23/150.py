@@ -1,11 +1,12 @@
-a = [1]
-for _ in range(15):
-    b = set()
-    for i in a:
-        b.add(i+3)
-        b.add(i*3)
-    a = b.copy()
+def f(a,b):
+    if a == b:
+        return 1
+    elif a > b:
+        return 0
+    return f(a+3,b) + f(a*3,b)
 
-b = [i for i in a if i % 2 == 0 and i < 100]
-print(b)
-print(len(b))
+k = 0
+for i in range(4,99,2):
+    if f(3,i) > 0:
+        k += 1
+print(k)

@@ -5,4 +5,4 @@ def f(a,b):
         return 0
     return f(a+2,b) + f(a*3,b)
 
-print(f(2,20)*f(20,40))
+print(f(1,25)*f(25,63))

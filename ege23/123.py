@@ -10,5 +10,6 @@ for c in range(100):
         a = b.copy()
         if a.count(80) > 0:
             kol += 1
+            break
 
 print(kol)
