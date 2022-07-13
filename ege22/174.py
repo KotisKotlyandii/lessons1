@@ -9,7 +9,8 @@ def f(x,y):
         y //= 10
     return a,b
 
-for x in range(1,10000):
-    for y in range(1,1000):
+
+for x in range(1,100000):
+    for y in range(1,10000000):
         if f(x,y) == (6,7):
             print(x*y)

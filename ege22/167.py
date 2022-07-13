@@ -8,7 +8,13 @@ def f(x):
         x //= 7
     return S
 
+a = []
 for x in range(1,100000):
     if f(x) > 25:
+        a.append(f(x))
+b = min(a)
+print(b)
+for x in range(1,100000):
+    if f(x) == b:
         print(x)
         break

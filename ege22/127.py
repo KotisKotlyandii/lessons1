@@ -1,7 +1,7 @@
 def f(x):
     a,b = 0,1
     while x > 0:
-        if x % 2 == 0:
+        if x % 2 > 0:
             a += x % 11
         else:
             b *= x % 11

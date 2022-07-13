@@ -4,8 +4,10 @@ def f(n):
         i += n % 9
         n //= 9
     return i%8
+
+
 kol = 0
 for x in range(10,100):
     if f(x) != 0:
-        print(x)
-        break
+        kol += 1
+print(kol)

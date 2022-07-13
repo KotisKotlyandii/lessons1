@@ -8,4 +8,3 @@ def f(n):
 for x in range(10,100):
     if f(x) == 0:
         print(x)
-        break

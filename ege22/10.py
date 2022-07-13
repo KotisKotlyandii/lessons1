@@ -3,7 +3,7 @@ def f(x):
     while x > 0:
         L += 1
         if M < x:
-            M += x % 10 * 2
+            M = x % 10 * 2
         x //= 10
     return '%d\n%d' % (L,M)
 

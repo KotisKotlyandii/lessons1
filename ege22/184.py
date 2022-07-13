@@ -8,7 +8,7 @@ def f(x):
             b -= a
     return a
 
-for x in range(1):
+for x in range(21, 1000):
     if f(x) == 64:
         print(x)
         break

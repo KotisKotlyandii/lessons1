@@ -2,7 +2,7 @@ def f(x):
     L,M = 0,0
     while x > 0:
         M += 1
-        if x % 2 != 0:
+        if x % 2 == 0:
             L += x % 8
         x //= 8
     return L,M

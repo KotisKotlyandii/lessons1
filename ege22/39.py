@@ -8,9 +8,11 @@ def f(x,y):
         r = a % b
         a = b
         b = r
-    return '%d\n%d' % (a,x)
+    return a, x, y
 
-for x in range(1,1000):
-    for y in range(1,1000):
-        if f(x,y)== '7\n42':
-            print(y)
+
+for i in range(1, 1000):
+    for j in range(1, 1000):
+        a, b, c = f(i, j)
+        if a == 7 and b == 42:
+            print(c)
