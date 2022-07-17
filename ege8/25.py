@@ -1,5 +1,5 @@
 k = 0
-for s1 in 'О':
+for s1 in 'ТК':
     for s2 in 'ТОК':
         for s3 in 'ТОК':
             for s4 in 'ТОК':

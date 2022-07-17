@@ -7,5 +7,5 @@ def f(c, n):
 
 
 a = 4*25**4 - 5**4 + 14
-print(f(a,3))
-print(sum(f(a,3)))
+print(f(a,5))
+print(sum(f(a,5)))

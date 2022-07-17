@@ -7,5 +7,5 @@ def f(c, n):
 
 
 for n in range(2,37):
-    if f(87,n)[-1] == 2 and 0 < len(f(87,n)) <= 3:
+    if f(87,n)[-1] == 2 and 0 < len(f(87,n)) <= 2:
         print(n)

@@ -1,2 +1,2 @@
 a = 2 ** 299 + 2 ** 298 + 2 ** 297 + 2 ** 296
-print(len(oct(a)))
+print(len(oct(a))-2)
