@@ -1,4 +1,4 @@
 k = 0
-for n in range(100000,10000000):
-    if len(hex(n)[2:]) <= 8 and len(oct(n)[2:]) >= 11 and str(n)[-1] == '5':
-        k += 1
+a = int("FFFFFFFF", 16)
+b = int("10000000000",8)
+print(len(range(b+1, a+1, 10)))

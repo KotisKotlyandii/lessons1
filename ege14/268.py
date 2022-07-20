@@ -9,6 +9,4 @@ s = []
 for n in range(2,11):
     k.append(f(572,n))
     s.append(n)
-
-print(k)
-print(s)
+    print(n, k[-1])
