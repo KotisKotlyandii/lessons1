@@ -12,7 +12,8 @@ for s1 in 'МАРТА':
         for s3 in 'МАРТА':
             for s4 in 'МАРТА':
                 for s5 in 'МАРТА':
-                    if  prov(s1+s2+s3+s4+s5):
+                    a = s1+s2+s3+s4+s5
+                    if  'АА' not in a and len(set(a)) == 4 and a.count('А') == 2 :
                         k += 1
                         sed.add(s1+s2+s3+s4+s5)
 print(k,len(sed))

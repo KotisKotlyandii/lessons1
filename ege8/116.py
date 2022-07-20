@@ -13,7 +13,8 @@ for s1 in 'АДЖИКА':
             for s4 in 'АДЖИКА':
                 for s5 in 'АДЖИКА':
                     for s6 in 'АДЖИКА':
-                        if  prov(s1+s2+s3+s4+s5+s6):
+                        a = s1+s2+s3+s4+s5+s6
+                        if 'АА' not in a and len(set(a)) == 5 and a.count('А') == 2:
                             k += 1
                             sed.add(s1+s2+s3+s4+s5+s6)
 print(k,len(sed))

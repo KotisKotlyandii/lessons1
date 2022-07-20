@@ -7,11 +7,14 @@ def prov(a):
 glasn = 'ЕА'
 
 k = 0
+sed = set()
 for s1 in 'ЕСАУЛ':
     for s2 in 'ЕСАУЛ':
         for s3 in 'ЕСАУЛ':
             for s4 in 'ЕСАУЛ':
                 for s5 in 'ЕСАУЛ':
-                    if len(set(s1+s2+s3+s4+s5)) == 5 and prov(s1+s2+s3+s4+s5):
+                    a = s1+s2+s3+s4+s5
+                    if len(set(a)) == 5 and 'АУ' not in a and 'УА' not in a:
                         k += 1
-print(k)
+                        sed.add(a)
+print(k,len(sed))
