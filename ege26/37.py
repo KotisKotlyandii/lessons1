@@ -1,14 +1,16 @@
-# import  sys
-#
-#
-# sys.stdin = open('26data/26-k6.txt')
+import  sys
+sys.stdin = open('26data/26-k6.txt')
 
-kol,nysh = map(int,input().split())
-
-ves_chena = {}
-for _ in range(kol):
-    ves,chena = map(int,input().split())
-    ves_chena[ves] = chena
-
-ves_chena = {i:ves_chena[y]/i for i in ves_chena for y in ves_chena}
-print(ves_chena)
+n, k = map(int,input().split())
+m = []
+for i in range(n):
+    a,b = map(int,input().split())
+    m.append((a,b,b/a))
+print(m)
+m.sort(key=lambda x: (x[2],-x[0]))
+print(m)
+x = m[:k]
+s = 0
+for i in x:
+    s += i[0]
+print(s, max(m, key=lambda x: x[0]))
